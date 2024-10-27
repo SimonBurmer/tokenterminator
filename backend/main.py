@@ -93,7 +93,7 @@ async def optimize_prompt(
     cache_service: CacheService = Depends(get_cache_service),
 ):
     result = await cache_service.check_cache(request.prompt)
-    if result.cached and False:  # disable caching for now
+    if result.cached and False:  # disable caching for now.
         response = GreenGPTResponse(
             optimizedPrompt="None",
             optimizedAnswer=result.answer,
